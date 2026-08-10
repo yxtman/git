@@ -96,7 +96,21 @@ a:hover { text-decoration: underline; }
   white-space: nowrap;
 }
 .site-nav a:hover { color: var(--text); text-decoration: none; background: var(--card); }
-.site-nav a.active { color: var(--accent); font-weight: 700; }
+.site-nav a.active {
+  position: relative;
+  color: var(--accent);
+  font-weight: 700;
+}
+.site-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 3px;
+  height: 2px;
+  background: var(--accent);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%);
+}
 
 .nav-toggle {
   display: none;
@@ -112,33 +126,68 @@ a:hover { text-decoration: underline; }
 /* ---------------- 英雄区 ---------------- */
 
 .hero {
-  padding: 56px 0 84px;
-  text-align: center;
+  padding: 72px 0 104px;
   background: var(--bg-2);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 32px), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 48px), 0 100%);
 }
 
+/* 首页 hero 两栏构图;其他页面保持居中 */
+.hero { text-align: center; }
+.hero-home { text-align: left; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+.hero-copy h1,
 .hero h1 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(2.2rem, 5.2vw, 3.6rem);
   font-weight: 800;
   letter-spacing: 1px;
+  line-height: 1.15;
 }
 .hero h1::before {
   content: "";
   display: block;
-  width: 10px;
-  height: 10px;
-  margin: 0 auto 18px;
+  width: 13px;
+  height: 13px;
+  margin: 0 auto 20px;
   background: var(--accent);
   border-radius: 2px;
   transform: rotate(45deg);
 }
+.hero-copy h1::before { margin: 0 0 20px; }
 .hero h1 em { color: var(--accent); font-style: normal; }
 .hero p {
-  max-width: 640px;
+  max-width: 600px;
   margin: 14px auto 0;
   color: var(--muted);
   font-size: 1.05rem;
+}
+.hero-copy p { margin: 16px 0 0; }
+
+.hero-mark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* hero 进入动效(仅一个作者时刻,尊重减弱动效设置) */
+.hero-copy h1 {
+  animation: hero-in 0.5s ease-out both;
+}
+.hero-mark {
+  animation: hero-in 0.5s 0.12s ease-out both;
+}
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy h1, .hero-mark { animation: none; }
 }
 
 /* ---------------- 章节标题 ---------------- */
@@ -147,17 +196,17 @@ a:hover { text-decoration: underline; }
 .section + .section { border-top: 1px solid var(--line); }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  margin-bottom: 8px;
+  margin-bottom: var(--sp-2);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .section-title::before {
   content: "";
-  width: 9px;
-  height: 9px;
+  width: 11px;
+  height: 11px;
   background: var(--accent);
   border-radius: 2px;
   transform: rotate(45deg);
@@ -177,15 +226,18 @@ a:hover { text-decoration: underline; }
 }
 
 .card {
+  position: relative;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: var(--sp-5);
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, clip-path 0.2s ease;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
 }
 .card:hover {
   border-color: var(--accent);
   background: var(--card-hover);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26px), calc(100% - 26px) 100%, 0 100%);
 }
 .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .card p { color: var(--muted); font-size: 0.92rem; }
@@ -228,6 +280,7 @@ a:hover { text-decoration: underline; }
   border-radius: var(--radius);
   margin: var(--sp-5) 0;
   font-size: 0.95rem;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
 }
 .callout strong { color: var(--accent); }
 
@@ -264,12 +317,13 @@ td { color: var(--text); }
 .roadmap li::before {
   content: "";
   position: absolute;
-  left: 9px;
-  top: 8px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+  left: 10px;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
   background: var(--accent);
+  transform: rotate(45deg);
 }
 .roadmap li::after {
   content: "";
@@ -278,7 +332,7 @@ td { color: var(--text); }
   top: 26px;
   bottom: 0;
   width: 2px;
-  background: var(--line);
+  background: linear-gradient(var(--accent), var(--line) 70%);
 }
 .roadmap li:last-child::after { display: none; }
 .roadmap h3 { font-size: 1.1rem; margin-bottom: 4px; }
@@ -289,8 +343,10 @@ td { color: var(--text); }
   border: 1px solid var(--line);
   color: var(--text);
   padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: 4px;
   font-size: 0.88rem;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 .roadmap .steps a:hover { border-color: var(--accent); text-decoration: none; color: var(--accent); }
 
@@ -423,12 +479,23 @@ table { font-variant-numeric: tabular-nums; }
 /* ---------------- 页脚 ---------------- */
 
 .site-footer {
+  position: relative;
   border-top: 1px solid var(--line);
   padding: 26px 0;
   margin-top: 40px;
   text-align: center;
   color: var(--muted);
   font-size: 0.85rem;
+}
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 72px) 100%, 0 100%);
 }
 .site-footer p + p { margin-top: 4px; }
 
@@ -458,6 +525,20 @@ table { font-variant-numeric: tabular-nums; }
   .site-nav.open { display: flex; }
   .site-nav a { padding: 10px 8px; font-size: 1rem; }
 
-  .hero { padding: 40px 0 66px; }
+  .hero { padding: 44px 0 92px; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+    text-align: center;
+  }
+  .hero-copy h1::before { margin: 0 auto 20px; }
+  .hero-copy p { margin: 14px auto 0; }
+
+  .hero-mark {
+    width: 150px;
+    margin: 0 auto;
+  }
+
   .section { padding: 34px 0; }
 }
