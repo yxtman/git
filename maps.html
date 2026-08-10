@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>地图篇 — 无畏契约新手指南</title>
-  <meta name="description" content="无畏契约地图入门:地图基本结构、13 张标准地图介绍与新手提示、当前竞技地图池。">
+  <meta name="description" content="无畏契约地图入门:地图基本结构、13 张标准地图小地图示意图与逐图分析、当前竞技地图池。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,6 +20,7 @@
       <a href="weapons.html">枪械</a>
       <a href="agents.html">英雄</a>
       <a href="lore.html">背景故事</a>
+      <a href="stories.html">英雄故事</a>
       <a href="tactics.html">战术</a>
       <a href="advanced.html">进阶</a>
       <a href="training.html">训练</a>
@@ -30,7 +31,7 @@
 <section class="hero">
   <div class="container">
     <h1>地图篇:<em>读懂战场</em></h1>
-    <p>地图是这游戏的一半。看懂结构,你才知道该站哪、该看哪、该往哪打。</p>
+    <p>每张地图都配了简化的示意图和分析——先看图,再进图,上手快一倍。</p>
   </div>
 </section>
 
@@ -46,7 +47,7 @@
       </div>
       <div class="card">
         <h3>中路(Mid)</h3>
-        <p>连接双方半场的咽喉要道。控制中路,就能同时威胁两个爆点,是最重要的地图控制区域。</p>
+        <p>连接双方半场的咽喉要道。控制中路,就能同时威胁多个爆点,是最重要的地图控制区域。</p>
       </div>
       <div class="card">
         <h3>连接(Connector)</h3>
@@ -60,61 +61,577 @@
   </section>
 
   <section class="section">
-    <h2 class="section-title">全部 13 张标准地图</h2>
-    <p class="section-desc">以下按上线时间排列。打法与地图理解相关的内容,详见<a href="tactics.html">战术篇</a>。</p>
+    <h2 class="section-title">示意图图例</h2>
+    <p class="section-desc">下图是每张地图的<b>简化示意图</b>(非精确地形,用于理解结构),图例:</p>
+    <div class="map-legend">
+      <span><i class="leg-attack"></i>进攻方出生点</span>
+      <span><i class="leg-defend"></i>防守方出生点</span>
+      <span><i class="leg-a"></i>A 爆点</span>
+      <span><i class="leg-b"></i>B 爆点</span>
+      <span><i class="leg-c"></i>C 爆点</span>
+      <span><i class="leg-line"></i>主要通道</span>
+      <span><i class="leg-special"></i>特殊机制</span>
+    </div>
+  </section>
 
-    <div class="grid">
-      <div class="card">
-        <h3>隐世修所 Haven</h3>
-        <p><strong>三点图(A/B/C)</strong> · 不丹廷布。进攻选择最多,防守方压力最大——三点图要防住所有路口,非常考验团队沟通。</p>
+  <!-- ================= Haven ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">隐世修所 Haven</h2>
+    <p class="map-meta">三点图 · 不丹廷布 · 2020 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Haven 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 245 L45 130 L92 92"/>
+            <path d="M45 245 L200 245 L200 130"/>
+            <path d="M45 245 L355 245 L355 130 L308 92"/>
+            <path d="M120 92 L120 120 L280 120 L280 92"/>
+          </g>
+          <rect x="62" y="50" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="193" y="50" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <rect x="324" y="50" width="70" height="42" rx="6" stroke="#a78bfa" stroke-dasharray="5 3" fill="rgba(167,139,250,0.12)"/>
+          <text x="97" y="79" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="228" y="79" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <text x="359" y="79" fill="#a78bfa" font-size="17" font-weight="700" text-anchor="middle">C</text>
+          <circle cx="45" cy="245" r="9" fill="#7dcd3f"/>
+          <text x="45" y="272" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="335" cy="278" r="9" fill="#4ea1ff"/>
+          <text x="335" y="302" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="211" y="215" fill="#9ba4b0" font-size="11">中路</text>
+          <text x="228" y="135" fill="#9ba4b0" font-size="10" text-anchor="middle">连接</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-c"></i>C 点</span>
+          <span><i class="leg-line"></i>三条进攻路线</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>双塔迷城 Bind</h3>
-        <p><strong>双点图,没有中路</strong> · 摩洛哥拉巴特。靠两扇单向传送门快速转点,新手最容易迷路的地图之一,建议先背传送门位置。</p>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>全游戏唯一的三点图:三个爆点 + 一条长中路 + 两条连接。进攻路线选择最多,防守压力最大。</p>
+        <p><span class="map-kicker">关键点位</span>中路(全图枢纽)、A 长廊、C 车库、B 塔楼。</p>
+        <p><span class="map-kicker">进攻要点</span>先控中路,控制后可以随时威胁三个点;三点图防守分散,进攻方信息优势明显。</p>
+        <p><span class="map-kicker">防守要点</span>每个点不能放太多人,保持信息流动;听到中路脚步要判断是转点还是假攻。</p>
+        <p><span class="map-kicker">新手提示</span>别守点深处发呆——优先守住连接和通道,把"敌人从哪来"报给队友。</p>
       </div>
-      <div class="card">
-        <h3>森寒冬港 Split</h3>
-        <p><strong>双点图,上下层结构</strong> · 日本东京。中路有绳索连接上下层,高处架枪有极大视野优势,防守方常抢电梯井。</p>
+    </div>
+  </section>
+
+  <!-- ================= Bind ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">双塔迷城 Bind</h2>
+    <p class="map-meta">双点图 · 没有中路 · 摩洛哥拉巴特 · 2020 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Bind 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 125 L90 90"/>
+            <path d="M45 240 L185 240 L185 175"/>
+            <path d="M45 240 L355 240 L355 125 L310 90"/>
+            <path d="M215 240 L215 175"/>
+          </g>
+          <rect x="62" y="48" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="48" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="77" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="77" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <rect x="160" y="150" width="30" height="24" rx="4" fill="rgba(250,204,21,0.2)" stroke="#facc15"/>
+          <text x="175" y="166" fill="#facc15" font-size="10" text-anchor="middle">传</text>
+          <rect x="240" y="150" width="30" height="24" rx="4" fill="rgba(250,204,21,0.2)" stroke="#facc15"/>
+          <text x="255" y="166" fill="#facc15" font-size="10" text-anchor="middle">传</text>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="160" y="140" fill="#facc15" font-size="10" text-anchor="middle">→B</text>
+          <text x="270" y="140" fill="#facc15" font-size="10" text-anchor="middle">→A</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>传送门(单向)</span>
+          <span><i class="leg-line"></i>左右两翼路线</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>义境空岛 Ascent</h3>
-        <p><strong>双点图,中路开阔</strong> · 意大利威尼斯。中路有旋转门,塔楼提供高点架枪。经典对枪图,适合练习基本功。</p>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>双点图但<b>没有中路</b>——地图分成左右两翼,靠两扇单向传送门连接。节奏快,转点快。</p>
+        <p><span class="map-kicker">关键点位</span>A 传送门、B 传送门、后花园、A 长屋、B 短屋。</p>
+        <p><span class="map-kicker">进攻要点</span>传送门转点极快:打 A 两秒传 B 再打一波,防守方反应不过来。</p>
+        <p><span class="map-kicker">防守要点</span>传送门附近是兵家必争之地,用技能提前看住;两翼各守各的,别轻易串门。</p>
+        <p><span class="map-kicker">新手提示</span>新手最常迷路的图!先在自定义里把两个传送门位置记住——"从哪进、传到哪、出门看哪"。</p>
       </div>
-      <div class="card">
-        <h3>极地寒港 Icebox</h3>
-        <p><strong>双点图,垂直结构</strong> · 俄罗斯北极群岛。高低差大、滑索多,架枪高度五花八门,新手容易被"高打低"打得怀疑人生。</p>
+    </div>
+  </section>
+
+  <!-- ================= Split ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">森寒冬港 Split</h2>
+    <p class="map-meta">双点图 · 上下层结构 · 日本东京 · 2020 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Split 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 125 L90 90"/>
+            <path d="M45 240 L200 240 L200 210"/>
+            <path d="M355 240 L355 125 L310 90"/>
+            <path d="M200 210 L200 120"/>
+            <path d="M200 240 L355 240"/>
+          </g>
+          <rect x="62" y="48" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="48" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="77" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="77" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <line x1="195" y1="150" x2="195" y2="195" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
+          <line x1="205" y1="150" x2="205" y2="195" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
+          <circle cx="200" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="200" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="213" y="180" fill="#facc15" font-size="10">绳索</text>
+          <text x="230" y="230" fill="#9ba4b0" font-size="10">中路电梯</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>上下层绳索</span>
+          <span><i class="leg-line"></i>左右两翼</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>微风岛屿 Breeze</h3>
-        <p><strong>双点图,大图长枪图</strong> · 百慕大三角。视野开阔、对枪距离远,狙击枪在这张图很有价值,短枪慎选。</p>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>双点图 + <b>上下层立体结构</b>:中路绳索连接 A 天窗(高层)与 B 天台,高低差是这张图的灵魂。</p>
+        <p><span class="map-kicker">关键点位</span>中路绳索、A 天窗(Heaven)、B 天台、电梯井、A 巷。</p>
+        <p><span class="map-kicker">进攻要点</span>抢下中路就控制了全局:从高处架枪视野压制,队友从低层包夹。</p>
+        <p><span class="map-kicker">防守要点</span>天窗/天台高点必须有人看守,中路渗透是最常见的突破口。</p>
+        <p><span class="map-kicker">新手提示</span>先学"电梯"路线(中路垂直通道),别在绳索上被高点钓鱼——架枪记得抬头。</p>
       </div>
-      <div class="card">
-        <h3>裂变通道 Fracture</h3>
-        <p><strong>双点图,H 形双向进攻</strong> · 美国新墨西哥州。进攻方可以从两侧同时压进,防守方容易被包夹,非常考验意识。</p>
+    </div>
+  </section>
+
+  <!-- ================= Ascent ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">义境空岛 Ascent</h2>
+    <p class="map-meta">双点图 · 中路开阔 · 意大利威尼斯 · 2020 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Ascent 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 120 L90 88"/>
+            <path d="M45 240 L200 240 L200 175"/>
+            <path d="M355 240 L355 120 L310 88"/>
+            <path d="M200 175 L200 150"/>
+            <path d="M115 120 L115 145 L285 145 L285 120"/>
+          </g>
+          <rect x="62" y="46" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="46" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="75" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="75" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <line x1="135" y1="130" x2="125" y2="145" stroke="#facc15" stroke-width="4"/>
+          <line x1="155" y1="130" x2="165" y2="145" stroke="#facc15" stroke-width="4"/>
+          <line x1="245" y1="130" x2="235" y2="145" stroke="#facc15" stroke-width="4"/>
+          <line x1="265" y1="130" x2="275" y2="145" stroke="#facc15" stroke-width="4"/>
+          <circle cx="200" cy="190" r="12" stroke="#facc15" stroke-width="2" fill="rgba(250,204,21,0.15)"/>
+          <text x="200" y="194" fill="#facc15" font-size="10" text-anchor="middle">塔</text>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="200" y="175" fill="#9ba4b0" font-size="11" text-anchor="middle">中路</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>旋转门</span>
+          <span><i class="leg-special leg-circle"></i>中路塔楼</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>珍珠港 Pearl</h3>
-        <p><strong>双点图,中路难缠</strong> · 葡萄牙里斯本。中路入口多、掩体复杂,信息难拿,讲究道具配合的地图。</p>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>双点图 + 开阔中路:中路两端各有一扇<b>旋转门</b>(可关闭),中路中央是<b>塔楼</b>制高点。</p>
+        <p><span class="map-kicker">关键点位</span>中路塔楼、A 旋转门、B 旋转门、A 巷、B 主道。</p>
+        <p><span class="map-kicker">进攻要点</span>塔楼是全图最重要的制高点——拿下中路+塔楼,进点就赢了一半。</p>
+        <p><span class="map-kicker">防守要点</span>旋转门会被关门,别贴脸站位;塔楼下方和连接口都要有视野。</p>
+        <p><span class="map-kicker">新手提示</span>这是一张非常"经典"的对枪图,练急停、练爆头线,这张图是最好的考场。</p>
       </div>
-      <div class="card">
-        <h3>莲华古城 Lotus</h3>
-        <p><strong>三点图,可旋转门</strong> · 印度西高止山。独特的旋转门机制改变通路,进攻路线花样多,防守站位要灵活。</p>
+    </div>
+  </section>
+
+  <!-- ================= Icebox ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">极地寒港 Icebox</h2>
+    <p class="map-meta">双点图 · 垂直结构 · 俄罗斯北极群岛 · 2020 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Icebox 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 130 L90 95"/>
+            <path d="M45 240 L195 240 L195 190"/>
+            <path d="M355 240 L355 150 L310 120"/>
+            <path d="M195 190 L195 150"/>
+            <path d="M115 130 L115 150 L195 150"/>
+          </g>
+          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="295" y="100" width="75" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="332" y="129" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <line x1="145" y1="150" x2="175" y2="115" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
+          <line x1="235" y1="150" x2="265" y2="115" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="330" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="330" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="182" y="112" fill="#facc15" font-size="10">滑索</text>
+          <text x="205" y="230" fill="#9ba4b0" font-size="10">中路</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>滑索(上下层)</span>
+          <span><i class="leg-line"></i>立体通道</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>日落之城 Sunset</h3>
-        <p><strong>双点图,紧凑型</strong> · 美国洛杉矶。中小尺寸、节奏快,中路连接近,适合快攻和强开,枪法对拼多。</p>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>双点图 + 极端<b>垂直结构</b>:雪地工业区,高低差大、滑索多,几乎每个点都有高层位。</p>
+        <p><span class="map-kicker">关键点位</span>A 雪道、B 内部、中路滑索、厨房、A 高层。</p>
+        <p><span class="map-kicker">进攻要点</span>利用滑索快速上高台,高打低的视野优势巨大;烟幕配合滑索进场是常见套路。</p>
+        <p><span class="map-kicker">防守要点</span>每个爆点都要有<b>高点看守</b>,纯地面站位会被上方的枪线打穿。</p>
+        <p><span class="map-kicker">新手提示</span>这张图新手最容易"被高打低打到怀疑人生"——先练走位路线,架枪时记得看高处。</p>
       </div>
-      <div class="card">
-        <h3>深渊之域 Abyss</h3>
-        <p><strong>双点图,垂直深渊</strong> · 挪威扬马延岛。地图边缘没有围栏,失误会直接坠落——走路远离边缘,这图专治不看路。</p>
+    </div>
+  </section>
+
+  <!-- ================= Breeze ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">微风岛屿 Breeze</h2>
+    <p class="map-meta">双点图 · 大图长枪图 · 百慕大三角 · 2021 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Breeze 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 130 L90 95"/>
+            <path d="M45 240 L200 240 L200 185"/>
+            <path d="M45 240 L355 240 L355 130 L310 95"/>
+            <path d="M200 185 L355 185"/>
+          </g>
+          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="330" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="330" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="180" y="215" fill="#4ea1ff" font-size="11">长中路(海边)</text>
+          <text x="180" y="178" fill="#9ba4b0" font-size="10">长线对枪区</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-line"></i>开阔长线通道</span>
+          <span><i class="line leg-defend"></i>中路海滩</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>锈蚀之城 Corrode</h3>
-        <p><strong>标准双点图</strong> · 法国圣米歇尔山。2025 年加入的最新图之一,工业废城风格,点位紧凑、转角多。</p>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>全游戏最大的地图之一:双点 + 超长中路,视野开阔、对枪距离远,是一张<b>长枪图</b>。</p>
+        <p><span class="map-kicker">关键点位</span>A 洞、B 长廊、中路海滩、A 主道、B 烟囱。</p>
+        <p><span class="map-kicker">进攻要点</span>狙击手在这张图有舞台;进点前多用烟幕遮住长线,别在空地上大摇大摆。</p>
+        <p><span class="map-kicker">防守要点</span>站位要深、要借助掩体——开阔地形露头就会被远距离枪线点名。</p>
+        <p><span class="map-kicker">新手提示</span>新手期在这张图别拿霰弹枪和短枪:距离会教做人,老老实实拿步枪或大狙。</p>
       </div>
-      <div class="card">
-        <h3>绝峰 Summit</h3>
-        <p><strong>双点图,动态封路</strong> · 中国张家界。2026 年 6 月加入竞技池的新图,独特机制是<b>可放下的墙体</b>,掉落后会永久封住某条路线——地图随对局变化,探索感拉满。</p>
+    </div>
+  </section>
+
+  <!-- ================= Fracture ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">裂变通道 Fracture</h2>
+    <p class="map-meta">双点图 · H 形双向进攻 · 美国新墨西哥州 · 2021 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Fracture 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M200 255 L95 255 L95 170"/>
+            <path d="M200 255 L305 255 L305 170"/>
+            <path d="M95 170 L200 170 L305 170"/>
+            <path d="M95 130 L95 170"/>
+            <path d="M305 130 L305 170"/>
+            <path d="M115 130 L115 95 L150 95"/>
+            <path d="M285 130 L285 95 L250 95"/>
+            <path d="M150 95 L250 95"/>
+          </g>
+          <rect x="62" y="52" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="52" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="81" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="81" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <line x1="120" y1="160" x2="120" y2="185" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
+          <line x1="280" y1="160" x2="280" y2="185" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
+          <circle cx="200" cy="255" r="9" fill="#7dcd3f"/>
+          <text x="200" y="282" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="200" y="110" fill="#9ba4b0" font-size="11" text-anchor="middle">中央大道</text>
+          <text x="130" y="195" fill="#facc15" font-size="10">绳索</text>
+          <text x="290" y="195" fill="#facc15" font-size="10">绳索</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>连接绳索</span>
+          <span><i class="leg-line"></i>H 形双翼通道</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>罕见的 <b>H 形地图</b>:进攻方出生在正中央,可以<b>从两侧同时进攻</b>,防守方天然处于被包夹的位置。</p>
+        <p><span class="map-kicker">关键点位</span>两侧绳索、A 上道、B 下道、中央大道、双翼连接。</p>
+        <p><span class="map-kicker">进攻要点</span>双线进攻是这张图的灵魂:两边同步施压,防守方顾此失彼,哪边漏了打哪边。</p>
+        <p><span class="map-kicker">防守要点</span>千万别孤身守点!这图单防=被包夹,多打交叉枪线、及时叫回防。</p>
+        <p><span class="map-kicker">新手提示</span>跟着队友走同一边,别一个人绕远路——这图"落单即死亡"。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Pearl ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">珍珠港 Pearl</h2>
+    <p class="map-meta">双点图 · 中路复杂 · 葡萄牙里斯本 · 2022 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Pearl 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 125 L90 90"/>
+            <path d="M45 240 L200 240 L200 190"/>
+            <path d="M355 240 L355 125 L310 90"/>
+            <path d="M200 190 L200 165"/>
+            <path d="M115 125 L115 165 L285 165 L285 125"/>
+          </g>
+          <rect x="62" y="48" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="48" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="77" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="77" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <rect x="175" y="150" width="50" height="34" rx="5" fill="rgba(78,161,255,0.12)" stroke="#4ea1ff" stroke-dasharray="4 3"/>
+          <text x="200" y="171" fill="#4ea1ff" font-size="10" text-anchor="middle">中路大厅</text>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="line leg-defend"></i>中路连接网络</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>双点图 + 复杂的<b>中路大厅网络</b>:中路入口多、掩体交错,是全场最难拿信息的地方。</p>
+        <p><span class="map-kicker">关键点位</span>中路大厅、A 中心、B 长廊、后道、双翼连接。</p>
+        <p><span class="map-kicker">进攻要点</span>道具先行:每个转角都有可能有敌人,用技能清完死角再进点。</p>
+        <p><span class="map-kicker">防守要点</span>中路最容易渗透,哨卫优先用陷阱封中路;听到大厅有动静立刻报点。</p>
+        <p><span class="map-kicker">新手提示</span>这张图"转角杀"频发——进点前养成"先问道具,再露身位"的习惯。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Lotus ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">莲华古城 Lotus</h2>
+    <p class="map-meta">三点图 · 可旋转门 · 印度西高止山 · 2023 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Lotus 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M70 240 L70 170 L90 150"/>
+            <path d="M70 170 L70 130"/>
+            <path d="M120 190 L200 190 L200 130"/>
+            <path d="M330 240 L330 170 L310 150"/>
+            <path d="M330 170 L330 130"/>
+            <path d="M280 190 L200 190"/>
+            <path d="M120 150 L90 150"/>
+            <path d="M280 150 L310 150"/>
+            <path d="M200 190 L200 240"/>
+          </g>
+          <rect x="62" y="88" width="60" height="40" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="314" y="88" width="60" height="40" rx="6" stroke="#a78bfa" stroke-dasharray="5 3" fill="rgba(167,139,250,0.12)"/>
+          <rect x="170" y="196" width="60" height="40" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="92" y="114" fill="#ff4655" font-size="15" font-weight="700" text-anchor="middle">A</text>
+          <text x="344" y="114" fill="#a78bfa" font-size="15" font-weight="700" text-anchor="middle">B</text>
+          <text x="200" y="222" fill="#f0b429" font-size="15" font-weight="700" text-anchor="middle">C</text>
+          <line x1="120" y1="140" x2="105" y2="130" stroke="#facc15" stroke-width="4"/>
+          <line x1="135" y1="145" x2="150" y2="135" stroke="#facc15" stroke-width="4"/>
+          <line x1="280" y1="140" x2="265" y2="130" stroke="#facc15" stroke-width="4"/>
+          <line x1="265" y1="145" x2="250" y2="135" stroke="#facc15" stroke-width="4"/>
+          <circle cx="70" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="70" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="330" cy="240" r="9" fill="#4ea1ff"/>
+          <text x="330" y="267" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="200" y="160" fill="#9ba4b0" font-size="11" text-anchor="middle">中央</text>
+          <text x="140" y="125" fill="#facc15" font-size="9">旋转门</text>
+          <text x="255" y="125" fill="#facc15" font-size="9">旋转门</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>可旋转门</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-c"></i>B 点</span>
+          <span><i class="leg-b"></i>C 点</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>三点图 + 多扇<b>可旋转门</b>:旋转门转动会改变通路,进攻路线非常灵活多变。</p>
+        <p><span class="map-kicker">关键点位</span>A 旋转门、B 旋转门、C 点、中央连接、A 顶。</p>
+        <p><span class="map-kicker">进攻要点</span>旋转门能瞬间切换进攻方向——A 打到一半转 B,节奏变化就是这张图的武器。</p>
+        <p><span class="map-kicker">防守要点</span>三点图防守分散,要依靠信息判断进攻重心,及时换防;旋转门声音就是情报。</p>
+        <p><span class="map-kicker">新手提示</span>开局多听旋转门的声音——听到转动就能猜到敌人要打哪边,这是免费的侦察。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Sunset ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">日落之城 Sunset</h2>
+    <p class="map-meta">双点图 · 紧凑快节奏 · 美国洛杉矶 · 2023 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Sunset 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 130 L90 95"/>
+            <path d="M45 240 L200 240 L200 175"/>
+            <path d="M355 240 L355 130 L310 95"/>
+            <path d="M200 175 L200 150"/>
+          </g>
+          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="211" y="195" fill="#9ba4b0" font-size="10">中路</text>
+          <text x="211" y="140" fill="#9ba4b0" font-size="10">连接</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-line"></i>紧凑通道</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>紧凑型双点图:地图尺寸小、中路短、连接近,节奏快,几乎每回合都有交火。</p>
+        <p><span class="map-kicker">关键点位</span>中路小巷、A 外场、B 内部、A 楼梯、B 后道。</p>
+        <p><span class="map-kicker">进攻要点</span>快节奏图适合速攻流:道具一波爆点,打防守方反应时间差。</p>
+        <p><span class="map-kicker">防守要点</span>点小人多,别站重叠位(会被一穿二);中路要派专人看守。</p>
+        <p><span class="map-kicker">新手提示</span>这张图练"快打快撤":打完第一波立刻换位,别在一个角落蹲到天荒地老。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Abyss ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">深渊之域 Abyss</h2>
+    <p class="map-meta">双点图 · 垂直深渊 · 挪威扬马延岛 · 2024 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Abyss 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 130 L90 95"/>
+            <path d="M45 240 L200 240 L200 175"/>
+            <path d="M355 240 L355 130 L310 95"/>
+            <path d="M200 175 L200 150"/>
+          </g>
+          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <line x1="20" y1="60" x2="20" y2="245" stroke="#ff4655" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
+          <line x1="380" y1="60" x2="380" y2="245" stroke="#ff4655" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
+          <line x1="20" y1="20" x2="380" y2="20" stroke="#ff4655" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="200" y="185" fill="#9ba4b0" font-size="10" text-anchor="middle">中路桥</text>
+          <text x="30" y="290" fill="#ff4655" font-size="9">掉落边缘</text>
+          <text x="330" y="35" fill="#ff4655" font-size="9">掉落边缘</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-a"></i>无围栏边缘(掉落即死)</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>双点图 + 全游戏唯一的<b>开放深渊</b>:地图边缘没有围栏,走位失误会直接坠落死亡。</p>
+        <p><span class="map-kicker">关键点位</span>中路桥、A 边、B 边、A 内部、B 塔。</p>
+        <p><span class="map-kicker">进攻要点</span>把敌人逼向边缘也是击杀方式;桥上是高频交火区,先手架枪优势大。</p>
+        <p><span class="map-kicker">防守要点</span>利用边缘落差打"悬崖战术",但自己千万别站在边缘——一发枪械冲击就能送你下去。</p>
+        <p><span class="map-kicker">新手提示</span>这张图第一杀手是"自己掉下去"。走路、拉枪、被击退时都要远离边缘!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Corrode ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">锈蚀之城 Corrode</h2>
+    <p class="map-meta">双点图 · 工业废城 · 法国圣米歇尔山 · 2025 年加入</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Corrode 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 150 L110 110"/>
+            <path d="M45 240 L200 240 L200 160"/>
+            <path d="M355 240 L355 150 L290 110"/>
+            <path d="M200 160 L200 135"/>
+          </g>
+          <rect x="78" y="70" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="308" y="70" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="113" y="99" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="343" y="99" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="211" y="180" fill="#9ba4b0" font-size="10">中路</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-line"></i>标准双点结构</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>2025 年加入的标准双点图:工业废城风格,点位紧凑、转角多、掩体密集。</p>
+        <p><span class="map-kicker">关键点位</span>A 点、B 点、中路连接、两侧通道。</p>
+        <p><span class="map-kicker">进攻要点</span>转角多 = 预瞄重要:贴着墙静步推进,准星始终放在下一个转角。</p>
+        <p><span class="map-kicker">防守要点</span>转角位是霰弹枪和短枪的天堂,注意排查近点,别给敌人"转角杀"的机会。</p>
+        <p><span class="map-kicker">新手提示</span>这张图较新、参考资料有限——先在自定义里完整逛一圈,再进排位,以游戏内为准。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Summit ================= -->
+  <section class="section map-block-wrap">
+    <h2 class="section-title">绝峰 Summit</h2>
+    <p class="map-meta">双点图 · 动态封路 · 中国张家界 · 2026 年 6 月加入(最新)</p>
+    <div class="map-block">
+      <div class="minimap">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Summit 小地图示意图">
+          <rect width="400" height="300" fill="#101820"/>
+          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M45 240 L45 130 L90 95"/>
+            <path d="M45 240 L200 240 L200 175"/>
+            <path d="M355 240 L355 130 L310 95"/>
+            <path d="M200 175 L200 150"/>
+            <path d="M110 150 L290 150"/>
+          </g>
+          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
+          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
+          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
+          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
+          <line x1="160" y1="150" x2="240" y2="150" stroke="#facc15" stroke-width="5" stroke-dasharray="6 4"/>
+          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
+          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
+          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
+          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
+          <text x="200" y="138" fill="#facc15" font-size="10" text-anchor="middle">可掉落墙体</text>
+          <text x="211" y="195" fill="#9ba4b0" font-size="10">中路</text>
+        </svg>
+        <div class="map-legend">
+          <span><i class="leg-special"></i>可掉落墙体(永久封路)</span>
+        </div>
+      </div>
+      <div class="map-analysis">
+        <p><span class="map-kicker">结构特点</span>2026 年 6 月加入竞技池的最新地图:双点结构 + 独特的<b>可掉落墙体</b>机制——墙体掉落后会<b>永久封住</b>某条路线,地图随对局演变。</p>
+        <p><span class="map-kicker">关键点位</span>A 点、B 点、中路、各可掉落墙体位置。</p>
+        <p><span class="map-kicker">进攻要点</span>墙体变化会改变通路——利用对手"惯性记忆"打时间差,趁对方还没适应新路线时强攻。</p>
+        <p><span class="map-kicker">防守要点</span>时刻留意墙体掉落后的新通路,及时调整站位;被永久封死的方向就不用再派人看了。</p>
+        <p><span class="map-kicker">新手提示</span>全新机制还在被职业选手开发中——新图阶段人人都是新手,大胆尝试、多看比赛学打法,以游戏内为准。</p>
       </div>
     </div>
   </section>
