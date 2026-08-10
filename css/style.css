@@ -304,20 +304,20 @@ td { color: var(--text); }
 .mm-label {
   position: absolute;
   transform: translate(-50%, -50%);
-  padding: 2px 9px;
+  padding: 0 6px;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #0f1923;
-  line-height: 1.4;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+  line-height: 1.5;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
-.mm-a { background: #ff4655; }
-.mm-b { background: #f0b429; }
-.mm-c { background: #a78bfa; }
-.mm-mid { background: #4ea1ff; }
+.mm-a { background: rgba(255, 70, 85, 0.88); }
+.mm-b { background: rgba(240, 180, 41, 0.88); }
+.mm-c { background: rgba(167, 139, 250, 0.88); }
+.mm-mid { background: rgba(78, 161, 255, 0.88); }
 
 .map-legend {
   display: flex;
