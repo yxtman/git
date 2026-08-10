@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>地图篇 — 无畏契约新手指南</title>
-  <meta name="description" content="无畏契约地图入门:地图基本结构、13 张标准地图小地图示意图与逐图分析、当前竞技地图池。">
+  <meta name="description" content="无畏契约地图入门:地图基本结构、13 张标准地图官方俯视图与逐图分析、当前竞技地图池。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
 <section class="hero">
   <div class="container">
     <h1>地图篇:<em>读懂战场</em></h1>
-    <p>每张地图都配了简化的示意图和分析——先看图,再进图,上手快一倍。</p>
+    <p>每张地图都配了官方俯视图和逐图分析——先看图,再进图,上手快一倍。</p>
   </div>
 </section>
 
@@ -61,16 +61,13 @@
   </section>
 
   <section class="section">
-    <h2 class="section-title">示意图图例</h2>
-    <p class="section-desc">下图是每张地图的<b>简化示意图</b>(非精确地形,用于理解结构),图例:</p>
+    <h2 class="section-title">地图图例</h2>
+    <p class="section-desc">下图是每张地图的<b>官方俯视图</b>(取自 Riot 官方游戏数据),A/B/C 爆点与中路标签按官方点位标注在图上。图例:</p>
     <div class="map-legend">
-      <span><i class="leg-attack"></i>进攻方出生点</span>
-      <span><i class="leg-defend"></i>防守方出生点</span>
       <span><i class="leg-a"></i>A 爆点</span>
       <span><i class="leg-b"></i>B 爆点</span>
       <span><i class="leg-c"></i>C 爆点</span>
-      <span><i class="leg-line"></i>主要通道</span>
-      <span><i class="leg-special"></i>特殊机制</span>
+      <span><i class="leg-mid"></i>中路</span>
     </div>
   </section>
 
@@ -80,32 +77,14 @@
     <p class="map-meta">三点图 · 不丹廷布 · 2020 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Haven 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 245 L45 130 L92 92"/>
-            <path d="M45 245 L200 245 L200 130"/>
-            <path d="M45 245 L355 245 L355 130 L308 92"/>
-            <path d="M120 92 L120 120 L280 120 L280 92"/>
-          </g>
-          <rect x="62" y="50" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="193" y="50" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <rect x="324" y="50" width="70" height="42" rx="6" stroke="#a78bfa" stroke-dasharray="5 3" fill="rgba(167,139,250,0.12)"/>
-          <text x="97" y="79" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="228" y="79" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <text x="359" y="79" fill="#a78bfa" font-size="17" font-weight="700" text-anchor="middle">C</text>
-          <circle cx="45" cy="245" r="9" fill="#7dcd3f"/>
-          <text x="45" y="272" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="335" cy="278" r="9" fill="#4ea1ff"/>
-          <text x="335" y="302" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="211" y="215" fill="#9ba4b0" font-size="11">中路</text>
-          <text x="228" y="135" fill="#9ba4b0" font-size="10" text-anchor="middle">连接</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Haven.png" alt="隐世修所 Haven 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
           <span><i class="leg-b"></i>B 点</span>
           <span><i class="leg-c"></i>C 点</span>
-          <span><i class="leg-line"></i>三条进攻路线</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -124,32 +103,12 @@
     <p class="map-meta">双点图 · 没有中路 · 摩洛哥拉巴特 · 2020 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Bind 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 125 L90 90"/>
-            <path d="M45 240 L185 240 L185 175"/>
-            <path d="M45 240 L355 240 L355 125 L310 90"/>
-            <path d="M215 240 L215 175"/>
-          </g>
-          <rect x="62" y="48" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="48" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="77" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="77" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <rect x="160" y="150" width="30" height="24" rx="4" fill="rgba(250,204,21,0.2)" stroke="#facc15"/>
-          <text x="175" y="166" fill="#facc15" font-size="10" text-anchor="middle">传</text>
-          <rect x="240" y="150" width="30" height="24" rx="4" fill="rgba(250,204,21,0.2)" stroke="#facc15"/>
-          <text x="255" y="166" fill="#facc15" font-size="10" text-anchor="middle">传</text>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="160" y="140" fill="#facc15" font-size="10" text-anchor="middle">→B</text>
-          <text x="270" y="140" fill="#facc15" font-size="10" text-anchor="middle">→A</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Bind.png" alt="双塔迷城 Bind 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>传送门(单向)</span>
-          <span><i class="leg-line"></i>左右两翼路线</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -168,31 +127,13 @@
     <p class="map-meta">双点图 · 上下层结构 · 日本东京 · 2020 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Split 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 125 L90 90"/>
-            <path d="M45 240 L200 240 L200 210"/>
-            <path d="M355 240 L355 125 L310 90"/>
-            <path d="M200 210 L200 120"/>
-            <path d="M200 240 L355 240"/>
-          </g>
-          <rect x="62" y="48" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="48" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="77" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="77" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <line x1="195" y1="150" x2="195" y2="195" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
-          <line x1="205" y1="150" x2="205" y2="195" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
-          <circle cx="200" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="200" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="213" y="180" fill="#facc15" font-size="10">绳索</text>
-          <text x="230" y="230" fill="#9ba4b0" font-size="10">中路电梯</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Split.png" alt="森寒冬港 Split 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>上下层绳索</span>
-          <span><i class="leg-line"></i>左右两翼</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -211,34 +152,13 @@
     <p class="map-meta">双点图 · 中路开阔 · 意大利威尼斯 · 2020 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Ascent 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 120 L90 88"/>
-            <path d="M45 240 L200 240 L200 175"/>
-            <path d="M355 240 L355 120 L310 88"/>
-            <path d="M200 175 L200 150"/>
-            <path d="M115 120 L115 145 L285 145 L285 120"/>
-          </g>
-          <rect x="62" y="46" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="46" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="75" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="75" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <line x1="135" y1="130" x2="125" y2="145" stroke="#facc15" stroke-width="4"/>
-          <line x1="155" y1="130" x2="165" y2="145" stroke="#facc15" stroke-width="4"/>
-          <line x1="245" y1="130" x2="235" y2="145" stroke="#facc15" stroke-width="4"/>
-          <line x1="265" y1="130" x2="275" y2="145" stroke="#facc15" stroke-width="4"/>
-          <circle cx="200" cy="190" r="12" stroke="#facc15" stroke-width="2" fill="rgba(250,204,21,0.15)"/>
-          <text x="200" y="194" fill="#facc15" font-size="10" text-anchor="middle">塔</text>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="200" y="175" fill="#9ba4b0" font-size="11" text-anchor="middle">中路</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Ascent.png" alt="义境空岛 Ascent 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>旋转门</span>
-          <span><i class="leg-special leg-circle"></i>中路塔楼</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -257,31 +177,13 @@
     <p class="map-meta">双点图 · 垂直结构 · 俄罗斯北极群岛 · 2020 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Icebox 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 130 L90 95"/>
-            <path d="M45 240 L195 240 L195 190"/>
-            <path d="M355 240 L355 150 L310 120"/>
-            <path d="M195 190 L195 150"/>
-            <path d="M115 130 L115 150 L195 150"/>
-          </g>
-          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="295" y="100" width="75" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="332" y="129" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <line x1="145" y1="150" x2="175" y2="115" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
-          <line x1="235" y1="150" x2="265" y2="115" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="330" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="330" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="182" y="112" fill="#facc15" font-size="10">滑索</text>
-          <text x="205" y="230" fill="#9ba4b0" font-size="10">中路</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Icebox.png" alt="极地寒港 Icebox 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>滑索(上下层)</span>
-          <span><i class="leg-line"></i>立体通道</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -300,28 +202,13 @@
     <p class="map-meta">双点图 · 大图长枪图 · 百慕大三角 · 2021 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Breeze 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 130 L90 95"/>
-            <path d="M45 240 L200 240 L200 185"/>
-            <path d="M45 240 L355 240 L355 130 L310 95"/>
-            <path d="M200 185 L355 185"/>
-          </g>
-          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="330" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="330" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="180" y="215" fill="#4ea1ff" font-size="11">长中路(海边)</text>
-          <text x="180" y="178" fill="#9ba4b0" font-size="10">长线对枪区</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Breeze.png" alt="微风岛屿 Breeze 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-line"></i>开阔长线通道</span>
-          <span><i class="line leg-defend"></i>中路海滩</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -340,35 +227,12 @@
     <p class="map-meta">双点图 · H 形双向进攻 · 美国新墨西哥州 · 2021 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Fracture 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M200 255 L95 255 L95 170"/>
-            <path d="M200 255 L305 255 L305 170"/>
-            <path d="M95 170 L200 170 L305 170"/>
-            <path d="M95 130 L95 170"/>
-            <path d="M305 130 L305 170"/>
-            <path d="M115 130 L115 95 L150 95"/>
-            <path d="M285 130 L285 95 L250 95"/>
-            <path d="M150 95 L250 95"/>
-          </g>
-          <rect x="62" y="52" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="52" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="81" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="81" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <line x1="120" y1="160" x2="120" y2="185" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
-          <line x1="280" y1="160" x2="280" y2="185" stroke="#facc15" stroke-width="4" stroke-dasharray="4 3"/>
-          <circle cx="200" cy="255" r="9" fill="#7dcd3f"/>
-          <text x="200" y="282" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="200" y="110" fill="#9ba4b0" font-size="11" text-anchor="middle">中央大道</text>
-          <text x="130" y="195" fill="#facc15" font-size="10">绳索</text>
-          <text x="290" y="195" fill="#facc15" font-size="10">绳索</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Fracture.png" alt="裂变通道 Fracture 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>连接绳索</span>
-          <span><i class="leg-line"></i>H 形双翼通道</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -387,28 +251,13 @@
     <p class="map-meta">双点图 · 中路复杂 · 葡萄牙里斯本 · 2022 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Pearl 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 125 L90 90"/>
-            <path d="M45 240 L200 240 L200 190"/>
-            <path d="M355 240 L355 125 L310 90"/>
-            <path d="M200 190 L200 165"/>
-            <path d="M115 125 L115 165 L285 165 L285 125"/>
-          </g>
-          <rect x="62" y="48" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="48" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="77" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="77" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <rect x="175" y="150" width="50" height="34" rx="5" fill="rgba(78,161,255,0.12)" stroke="#4ea1ff" stroke-dasharray="4 3"/>
-          <text x="200" y="171" fill="#4ea1ff" font-size="10" text-anchor="middle">中路大厅</text>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Pearl.png" alt="珍珠港 Pearl 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="line leg-defend"></i>中路连接网络</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -427,42 +276,13 @@
     <p class="map-meta">三点图 · 可旋转门 · 印度西高止山 · 2023 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Lotus 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M70 240 L70 170 L90 150"/>
-            <path d="M70 170 L70 130"/>
-            <path d="M120 190 L200 190 L200 130"/>
-            <path d="M330 240 L330 170 L310 150"/>
-            <path d="M330 170 L330 130"/>
-            <path d="M280 190 L200 190"/>
-            <path d="M120 150 L90 150"/>
-            <path d="M280 150 L310 150"/>
-            <path d="M200 190 L200 240"/>
-          </g>
-          <rect x="62" y="88" width="60" height="40" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="314" y="88" width="60" height="40" rx="6" stroke="#a78bfa" stroke-dasharray="5 3" fill="rgba(167,139,250,0.12)"/>
-          <rect x="170" y="196" width="60" height="40" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="92" y="114" fill="#ff4655" font-size="15" font-weight="700" text-anchor="middle">A</text>
-          <text x="344" y="114" fill="#a78bfa" font-size="15" font-weight="700" text-anchor="middle">B</text>
-          <text x="200" y="222" fill="#f0b429" font-size="15" font-weight="700" text-anchor="middle">C</text>
-          <line x1="120" y1="140" x2="105" y2="130" stroke="#facc15" stroke-width="4"/>
-          <line x1="135" y1="145" x2="150" y2="135" stroke="#facc15" stroke-width="4"/>
-          <line x1="280" y1="140" x2="265" y2="130" stroke="#facc15" stroke-width="4"/>
-          <line x1="265" y1="145" x2="250" y2="135" stroke="#facc15" stroke-width="4"/>
-          <circle cx="70" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="70" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="330" cy="240" r="9" fill="#4ea1ff"/>
-          <text x="330" y="267" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="200" y="160" fill="#9ba4b0" font-size="11" text-anchor="middle">中央</text>
-          <text x="140" y="125" fill="#facc15" font-size="9">旋转门</text>
-          <text x="255" y="125" fill="#facc15" font-size="9">旋转门</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Lotus.png" alt="莲华古城 Lotus 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>可旋转门</span>
           <span><i class="leg-a"></i>A 点</span>
-          <span><i class="leg-c"></i>B 点</span>
-          <span><i class="leg-b"></i>C 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-c"></i>C 点</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -481,27 +301,13 @@
     <p class="map-meta">双点图 · 紧凑快节奏 · 美国洛杉矶 · 2023 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Sunset 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 130 L90 95"/>
-            <path d="M45 240 L200 240 L200 175"/>
-            <path d="M355 240 L355 130 L310 95"/>
-            <path d="M200 175 L200 150"/>
-          </g>
-          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="211" y="195" fill="#9ba4b0" font-size="10">中路</text>
-          <text x="211" y="140" fill="#9ba4b0" font-size="10">连接</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Sunset.png" alt="日落之城 Sunset 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-line"></i>紧凑通道</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -520,31 +326,13 @@
     <p class="map-meta">双点图 · 垂直深渊 · 挪威扬马延岛 · 2024 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Abyss 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 130 L90 95"/>
-            <path d="M45 240 L200 240 L200 175"/>
-            <path d="M355 240 L355 130 L310 95"/>
-            <path d="M200 175 L200 150"/>
-          </g>
-          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <line x1="20" y1="60" x2="20" y2="245" stroke="#ff4655" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
-          <line x1="380" y1="60" x2="380" y2="245" stroke="#ff4655" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
-          <line x1="20" y1="20" x2="380" y2="20" stroke="#ff4655" stroke-width="2" stroke-dasharray="5 4" opacity="0.7"/>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="200" y="185" fill="#9ba4b0" font-size="10" text-anchor="middle">中路桥</text>
-          <text x="30" y="290" fill="#ff4655" font-size="9">掉落边缘</text>
-          <text x="330" y="35" fill="#ff4655" font-size="9">掉落边缘</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Abyss.png" alt="深渊之域 Abyss 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-a"></i>无围栏边缘(掉落即死)</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -563,26 +351,13 @@
     <p class="map-meta">双点图 · 工业废城 · 法国圣米歇尔山 · 2025 年加入</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Corrode 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 150 L110 110"/>
-            <path d="M45 240 L200 240 L200 160"/>
-            <path d="M355 240 L355 150 L290 110"/>
-            <path d="M200 160 L200 135"/>
-          </g>
-          <rect x="78" y="70" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="308" y="70" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="113" y="99" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="343" y="99" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="211" y="180" fill="#9ba4b0" font-size="10">中路</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Corrode.png" alt="锈蚀之城 Corrode 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-line"></i>标准双点结构</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -601,29 +376,13 @@
     <p class="map-meta">双点图 · 动态封路 · 中国张家界 · 2026 年 6 月加入(最新)</p>
     <div class="map-block">
       <div class="minimap">
-        <svg viewBox="0 0 400 300" role="img" aria-label="Summit 小地图示意图">
-          <rect width="400" height="300" fill="#101820"/>
-          <g stroke="#33465a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M45 240 L45 130 L90 95"/>
-            <path d="M45 240 L200 240 L200 175"/>
-            <path d="M355 240 L355 130 L310 95"/>
-            <path d="M200 175 L200 150"/>
-            <path d="M110 150 L290 150"/>
-          </g>
-          <rect x="62" y="53" width="70" height="42" rx="6" stroke="#ff4655" stroke-dasharray="5 3" fill="rgba(255,70,85,0.12)"/>
-          <rect x="324" y="53" width="70" height="42" rx="6" stroke="#f0b429" stroke-dasharray="5 3" fill="rgba(240,180,41,0.12)"/>
-          <text x="97" y="82" fill="#ff4655" font-size="17" font-weight="700" text-anchor="middle">A</text>
-          <text x="359" y="82" fill="#f0b429" font-size="17" font-weight="700" text-anchor="middle">B</text>
-          <line x1="160" y1="150" x2="240" y2="150" stroke="#facc15" stroke-width="5" stroke-dasharray="6 4"/>
-          <circle cx="45" cy="240" r="9" fill="#7dcd3f"/>
-          <text x="45" y="267" fill="#7dcd3f" font-size="10" text-anchor="middle">进攻方</text>
-          <circle cx="200" cy="272" r="9" fill="#4ea1ff"/>
-          <text x="200" y="296" fill="#4ea1ff" font-size="10" text-anchor="middle">防守方</text>
-          <text x="200" y="138" fill="#facc15" font-size="10" text-anchor="middle">可掉落墙体</text>
-          <text x="211" y="195" fill="#9ba4b0" font-size="10">中路</text>
-        </svg>
+        <div class="minimap-img">
+        <img src="images/maps/Summit.png" alt="绝峰 Summit 官方地图俯视图" loading="lazy">
+      </div>
         <div class="map-legend">
-          <span><i class="leg-special"></i>可掉落墙体(永久封路)</span>
+          <span><i class="leg-a"></i>A 点</span>
+          <span><i class="leg-b"></i>B 点</span>
+          <span><i class="leg-mid"></i>中路</span>
         </div>
       </div>
       <div class="map-analysis">
@@ -661,6 +420,7 @@
   <div class="container">
     <p>《无畏契约》新手指南 · 内容基于 2026 年 7 月版本,版本更新后以游戏内为准</p>
     <p>本网站为玩家自制教学站点,与 Riot Games 无隶属关系</p>
+    <p>地图俯视图与游戏数据版权归 Riot Games 所有,仅用于教学展示</p>
   </div>
 </footer>
 
