@@ -1,0 +1,23 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# IDE 配置
+.idea/
+.vscode/
+*.suo
+*.user
+
+# 编辑器临时文件
+*~
+*.swp
+*.tmp
+
+# 日志
+*.log
+
+# 缓存
+.cache/
