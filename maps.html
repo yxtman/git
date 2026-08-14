@@ -1,10 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>地图篇 — 无畏契约新手指南</title>
   <meta name="description" content="无畏契约地图入门:地图基本结构、13 张标准地图官方俯视图与逐图分析、当前竞技地图池。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="无畏契约新手指南">
+  <meta property="og:title" content="地图篇 — 无畏契约新手指南">
+  <meta property="og:description" content="地图基本结构、13 张标准地图俯视图、逐图分析与当前竞技地图池。">
+  <meta property="og:url" content="https://yxtman.github.io/git/maps.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://yxtman.github.io/git/maps.html">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,11 +20,11 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo">VALORANT<span> 指南</span></a>
-    <button type="button" class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
-    <nav class="site-nav" id="siteNav">
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-controls="siteNav" aria-expanded="false">☰</button>
+    <nav class="site-nav" id="siteNav" aria-label="主导航">
       <a href="index.html">首页</a>
       <a href="basics.html">新手基础</a>
-      <a href="maps.html" class="active">地图</a>
+      <a href="maps.html" class="active" aria-current="page">地图</a>
       <a href="weapons.html">枪械</a>
       <a href="agents.html">英雄</a>
       <a href="lore.html">背景故事</a>
@@ -78,7 +86,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Haven.png" alt="隐世修所 Haven 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Haven.png" alt="隐世修所 Haven 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -104,7 +112,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Bind.png" alt="双塔迷城 Bind 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Bind.png" alt="双塔迷城 Bind 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -128,7 +136,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Split.png" alt="森寒冬港 Split 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Split.png" alt="森寒冬港 Split 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -153,7 +161,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Ascent.png" alt="义境空岛 Ascent 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Ascent.png" alt="义境空岛 Ascent 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -178,7 +186,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Icebox.png" alt="极地寒港 Icebox 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Icebox.png" alt="极地寒港 Icebox 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -203,7 +211,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Breeze.png" alt="微风岛屿 Breeze 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Breeze.png" alt="微风岛屿 Breeze 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -228,7 +236,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Fracture.png" alt="裂变通道 Fracture 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Fracture.png" alt="裂变通道 Fracture 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -252,7 +260,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Pearl.png" alt="珍珠港 Pearl 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Pearl.png" alt="珍珠港 Pearl 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -277,7 +285,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Lotus.png" alt="莲华古城 Lotus 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Lotus.png" alt="莲华古城 Lotus 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -302,7 +310,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Sunset.png" alt="日落之城 Sunset 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Sunset.png" alt="日落之城 Sunset 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -327,7 +335,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Abyss.png" alt="深渊之域 Abyss 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Abyss.png" alt="深渊之域 Abyss 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -352,7 +360,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Corrode.png" alt="锈蚀之城 Corrode 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Corrode.png" alt="锈蚀之城 Corrode 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -377,7 +385,7 @@
     <div class="map-block">
       <div class="minimap">
         <div class="minimap-img">
-        <img src="images/maps/Summit.png" alt="绝峰 Summit 官方地图俯视图" loading="lazy">
+        <img src="images/maps/Summit.png" alt="绝峰 Summit 官方地图俯视图" loading="lazy" decoding="async" width="1024" height="1024">
       </div>
         <div class="map-legend">
           <span><i class="leg-a"></i>A 点</span>
@@ -427,3 +435,4 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
